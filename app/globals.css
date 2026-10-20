@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* tell v4 to use class-based dark mode */
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, rgb(241,245,249), rgb(255,255,255), rgb(226,232,240));
+  }
+
+  html.dark body {
+    background: linear-gradient(to bottom right, rgb(3,7,18), rgb(15,23,42), rgb(3,7,18));
+  }
+}
+
+/* ... rest of your @layer utilities animations unchanged ... */
